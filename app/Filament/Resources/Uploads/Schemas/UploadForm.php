@@ -13,6 +13,8 @@ class UploadForm
             ->components([
                 FileUpload::make('source')
                     ->label('Upload File')
+                    ->previewable(false)
+                    ->downloadable()
                     ->moveFiles()
                     ->required(),
             ]);
